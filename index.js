@@ -165,6 +165,7 @@ let i = 0;
 let quotes = document.getElementById('quote');
 let textBody = document.querySelector('.text-body');
 let mode = document.querySelector('.on-off');
+let copy = document.querySelector('.copy-btn');
 function displayText(type) {
 
     textBody.innerHTML = `
@@ -212,4 +213,20 @@ document.querySelector('.gen-btn').addEventListener('click', () => {
 });
 quotes.addEventListener('change', (event) => {
     quoteConditions();
+});
+
+copy.addEventListener('click', async () => {
+
+    try {
+        let textCopy = textBody.innerHTML;
+        await navigator.clipboard.writeText(textCopy);
+        copy.innerHTML = 'copied';
+        setTimeout(() => {
+            copy.innerHTML = 'copy'
+        }, 2000);
+
+    } catch (err) {
+        alert('failed to copy text.');
+    }
+
 });

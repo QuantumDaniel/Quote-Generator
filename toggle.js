@@ -6,6 +6,7 @@ function changeMode() {
     let quoteType = document.querySelector('.quote-type');
     let nameHeader = document.querySelector('.name-header');
     let genBtn = document.querySelector('.gen-btn');
+    let copyBtn = document.querySelector('.copy-btn');
 
 
     let innerContainer = document.querySelector('.inner-container');
@@ -17,9 +18,7 @@ function changeMode() {
         nameHeader.style.background = '#1E3A8A';
         nameHeader.style.color = '#F8F9FA';
         genBtn.style.background = '#1E3A8A';
-
-
-
+        copyBtn.style.color = '#F8F9FA';
 
     }
     else if (mode.innerHTML === 'LIGHT') {
@@ -29,6 +28,7 @@ function changeMode() {
         nameHeader.style.background = ' #0D6EFD';
         nameHeader.style.color = '#ffff';
         genBtn.style.background = ' #0D6EFD';
+        copyBtn.style.color = '#000';
 
     }
 }
