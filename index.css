@@ -61,6 +61,7 @@ body {
     .name-header {
         font-size: 25px;
         align-content: center;
+        height: 75px;
     }
 
     .inner-container {
@@ -71,6 +72,15 @@ body {
         height: 60vh;
         padding-bottom: 40px;
         padding-top: 10px;
+    }
+
+    .text-div {
+        max-width: 70%;
+        min-width: 20%;
+        margin-left: 15%;
+        height: 70%;
+        background: white;
+
     }
 
 }
