@@ -164,6 +164,7 @@ const spiritualQuotes = [
 let i = 0;
 let quotes = document.getElementById('quote');
 let textBody = document.querySelector('.text-body');
+let mode = document.querySelector('.on-off');
 function displayText(type) {
 
     textBody.innerHTML = `
@@ -173,21 +174,33 @@ function displayText(type) {
 };
 function quoteConditions() {
     let inner = document.querySelector('.inner-container');
-    if (quotes.value === 'Love') {
+
+    if (quotes.value === 'Love' && mode.innerHTML === 'LIGHT') {
         inner.style.background = 'rgb(255, 238, 230)';
         displayText(loveQuotes);
-    } else if (quotes.value === 'Motivational') {
+    } else if (quotes.value === 'Motivational' && mode.innerHTML === 'LIGHT') {
         inner.style.background = 'rgb(219, 234, 254)';
         displayText(motivationalQuotes);
     }
-    else if (quotes.value === 'Spiritual') {
+    else if (quotes.value === 'Spiritual' && mode.innerHTML === 'LIGHT') {
         inner.style.background = 'rgb(224, 195, 252)';
         displayText(spiritualQuotes);
     }
-    else if (quotes.value === 'Select') {
+    else if (quotes.value === 'Select' && mode.innerHTML === 'LIGHT') {
         inner.style.background = 'rgb(230, 137, 137)';
         textBody.innerHTML = '';
+    };
+
+    if (quotes.value === 'Love' && mode.innerHTML === 'DARK') {
+        displayText(loveQuotes);
     }
+    else if (quotes.value === 'Motivational' && mode.innerHTML === 'DARK') {
+        displayText(motivationalQuotes);
+    }
+    else if (quotes.value === 'Spiritual' && mode.innerHTML === 'DARK') {
+        displayText(spiritualQuotes);
+    };
+
 };
 document.querySelector('.gen-btn').addEventListener('click', () => {
 
@@ -200,5 +213,3 @@ document.querySelector('.gen-btn').addEventListener('click', () => {
 quotes.addEventListener('change', (event) => {
     quoteConditions();
 });
-
-
