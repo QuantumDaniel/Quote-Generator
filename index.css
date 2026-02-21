@@ -4,7 +4,7 @@ body {
 }
 
 .inner-container {
-    margin-top: 15vh;
+    margin-top: 5vh;
     margin-left: 200px;
     margin-right: 200px;
     background: #ffe4e6;
@@ -48,4 +48,27 @@ body {
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 40px;
+}
+
+.gen-btn {
+    width: 100% !important;
+    margin-left: 10px;
+}
+
+@media (max-width:700px) {
+    .name-header {
+        font-size: 25px;
+        align-content: center;
+    }
+
+    .inner-container {
+        margin-top: 5vh;
+        margin-left: 10px;
+        margin-right: 10px;
+        background: #ffe4e6;
+        height: 60vh;
+        padding-bottom: 40px;
+        padding-top: 10px;
+    }
+
 }

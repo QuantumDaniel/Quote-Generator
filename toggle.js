@@ -5,6 +5,7 @@ function changeMode() {
     let main = document.querySelector('.inner-body');
     let quoteType = document.querySelector('.quote-type');
     let nameHeader = document.querySelector('.name-header');
+    let genBtn = document.querySelector('.gen-btn');
 
 
     let innerContainer = document.querySelector('.inner-container');
@@ -15,6 +16,7 @@ function changeMode() {
         quoteType.style.color = 'white';
         nameHeader.style.background = '#1E3A8A';
         nameHeader.style.color = '#F8F9FA';
+        genBtn.style.background = '#1E3A8A';
 
 
 
@@ -26,6 +28,7 @@ function changeMode() {
         quoteType.style.color = 'black';
         nameHeader.style.background = ' #0D6EFD';
         nameHeader.style.color = '#ffff';
+        genBtn.style.background = ' #0D6EFD';
 
     }
 }
